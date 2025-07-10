@@ -21,9 +21,8 @@ class FilmResource extends JsonResource
         return $this->getCampi();
     }
         private function getCampi(){
-            $locale = "http://localhost/ESAMI/ESAME%20SESSIONE%206%20ACCADEMIA%20CODE%20DI%20SABATINO%20MANUEL/esame_6_CODE/public/storage/img/";
-            $locale_video = "http://localhost/ESAMI/ESAME%20SESSIONE%206%20ACCADEMIA%20CODE%20DI%20SABATINO%20MANUEL/esame_6_CODE/public/storage/video/";
-            $server = 'http://127.0.0.1:8000/storage/img/';
+            $locale = "https://www.manueldisabatino.it/stream-backend/storage/app/public/img/";
+            $locale_video = "https://www.manueldisabatino.it/stream-backend/storage/app/public/video/";
             $idUser = Auth::user()->idUser;
             $preferito = FilmPreferiti::where('idUSer',$idUser)->where('idFilm',$this->idFilm)->exists();
         return [
